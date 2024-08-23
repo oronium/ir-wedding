@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gardmei - Report Device</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-green-600">Gardmei</div>
+            <div class="space-x-4">
+                <a href="#" class="text-gray-700 hover:text-green-600">Home</a>
+                <a href="#" class="text-gray-700 hover:text-green-600">My Devices</a>
+                <a href="#" class="text-gray-700 hover:text-green-600">Profile</a>
+                <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+        <h1 class="text-3xl font-bold mb-8 text-center">Report Device</h1>
+        
+        <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8">
+            <div class="mb-8">
+                <h2 class="text-xl font-semibold mb-4">Step 1: Select the Device to Report</h2>
+                <select id="deviceSelect" class="w-full p-2 border border-gray-300 rounded-md">
+                    <option value="">Select a device</option>
+                    <option value="device1">iPhone 12 Pro (IMEI: 123456789012345)</option>
+                    <option value="device2">Samsung Galaxy S21 (IMEI: 987654321098765)</option>
+                    <option value="device3">iPad Air (Serial: ABCDEF123456)</option>
+                </select>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-xl font-semibold mb-4">Step 2: Report Details</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label for="reportType" class="block mb-1">Report Type</label>
+                        <select id="reportType" class="w-full p-2 border border-gray-300 rounded-md">
+                            <option value="">Select report type</option>
+                            <option value="lost">Lost</option>
+                            <option value="stolen">Stolen</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="incidentDate" class="block mb-1">Date of Incident</label>
+                        <input type="date" id="incidentDate" class="w-full p-2 border border-gray-300 rounded-md">
+                    </div>
+                    <div>
+                        <label for="incidentLocation" class="block mb-1">Location of Incident</label>
+                        <input type="text" id="incidentLocation" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Enter location">
+                    </div>
+                    <div>
+                        <label for="policeReport" class="block mb-1">Police Report Number (if available)</label>
+                        <input type="text" id="policeReport" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Enter police report number">
+                    </div>
+                    <div>
+                        <label for="additionalDetails" class="block mb-1">Additional Details</label>
+                        <textarea id="additionalDetails" class="w-full p-2 border border-gray-300 rounded-md" rows="4" placeholder="Provide any additional details about the incident"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-xl font-semibold mb-4">Step 3: Confirm Report</h2>
+                <div class="bg-gray-100 p-4 rounded-md mb-4">
+                    <p class="text-sm text-gray-700">By submitting this report, you declare that the information provided is true to the best of your knowledge. False reporting may lead to legal consequences. This report will be shared with relevant authorities and your device will be marked as lost/stolen in our system.</p>
+                </div>
+                <div class="flex items-center mb-4">
+                    <input type="checkbox" id="confirmReport" class="mr-2">
+                    <label for="confirmReport">I confirm that the information provided is accurate and I authorize Gardmei to report this device as lost/stolen</label>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button id="reportButton" class="bg-green-600 text-white px-6 py-3 rounded-md text-lg hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed" disabled>
+                    Submit Report
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Gardmei. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const deviceSelect = document.getElementById('deviceSelect');
+        const reportType = document.getElementById('reportType');
+        const incidentDate = document.getElementById('incidentDate');
+        const incidentLocation = document.getElementById('incidentLocation');
+        const confirmReport = document.getElementById('confirmReport');
+        const reportButton = document.getElementById('reportButton');
+
+        function checkFormValidity() {
+            const isValid = deviceSelect.value !== '' && 
+                            reportType.value !== '' && 
+                            incidentDate.value !== '' && 
+                            incidentLocation.value.trim() !== '' && 
+                            confirmReport.checked;
+            reportButton.disabled = !isValid;
+        }
+
+        [deviceSelect, reportType, incidentDate, incidentLocation, confirmReport].forEach(el => {
+            el.addEventListener('change', checkFormValidity);
+            el.addEventListener('input', checkFormValidity);
+        });
+
+        reportButton.addEventListener('click', function() {
+            alert('Device report submitted. You will receive a confirmation and further instructions shortly.');
+            // Here you would typically send the data to your backend for processing
+        });
+    </script>
+</body>
+</html>
