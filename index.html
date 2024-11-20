@@ -1,121 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gardmei - Secure Your Devices</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 font-sans">
-    <header class="bg-white shadow-md">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="text-2xl font-bold text-green-600">Gardmei</div>
-            <div class="space-x-4">
-                <a href="#features" class="text-gray-700 hover:text-green-600">Features</a>
-                <a href="#about" class="text-gray-700 hover:text-green-600">About Us</a>
-                <a href="#subscription" class="text-gray-700 hover:text-green-600">Subscription</a>
-                <a href="#login" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">Login</a>
-            </div>
-        </nav>
-    </header>
-
-    <main class="container mx-auto px-6 py-8">
-        <section id="hero" class="text-center py-20">
-            <h1 class="text-4xl font-bold mb-4">Secure Your Devices with Gardmei</h1>
-            <p class="text-xl text-gray-600 mb-8">The smart way to protect and manage your electronic assets</p>
-            <a href="#signup" class="bg-green-600 text-white px-6 py-3 rounded-md text-lg hover:bg-green-700">Get Started</a>
-        </section>
-
-        <section id="features" class="py-16">
-            <h2 class="text-3xl font-bold mb-8 text-center">Key Features</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <h3 class="text-xl font-semibold mb-4">Transfer of Ownership</h3>
-                    <p class="mb-4">Securely transfer device ownership with our streamlined process, ensuring a smooth transition for buyers and sellers.</p>
-                    <a href="#transfer" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">Transfer Ownership</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <h3 class="text-xl font-semibold mb-4">Device De-linking</h3>
-                    <p class="mb-4">Easily de-link your devices when you sell or dispose of them, maintaining your privacy and security.</p>
-                    <a href="#delink" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">De-link Device</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <h3 class="text-xl font-semibold mb-4">Report Device</h3>
-                    <p class="mb-4">Quickly report lost or stolen devices to protect yourself and prevent unauthorized use.</p>
-                    <a href="#report" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">Report Device</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="py-16 bg-gray-50">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl font-bold mb-6">About Gardmei</h2>
-                <p class="text-lg text-gray-700 mb-8">
-                    Gardmei is a pioneering platform dedicated to revolutionizing device security and management. We provide innovative solutions for individuals and businesses to protect their electronic assets, streamline ownership transfers, and maintain privacy in an increasingly connected world.
-                </p>
-                <h3 class="text-2xl font-semibold mb-4">Our Mission</h3>
-                <p class="text-lg text-gray-700 mb-8">
-                    We aim to create a safer digital ecosystem by offering robust tools for device registration, ownership verification, and secure transactions. Our goal is to minimize device theft, streamline the buying and selling process, and provide peace of mind to our users.
-                </p>
-                <h3 class="text-2xl font-semibold mb-4">Why Choose Gardmei?</h3>
-                <ul class="text-lg text-gray-700 list-disc list-inside mb-8">
-                    <li>Secure and easy-to-use platform</li>
-                    <li>Comprehensive device management tools</li>
-                    <li>Quick and efficient ownership transfer process</li>
-                    <li>Dedicated customer support</li>
-                    <li>Flexible subscription plans to suit your needs</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="subscription" class="py-16">
-            <h2 class="text-3xl font-bold mb-8 text-center">Subscription Plans</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <h3 class="text-xl font-semibold mb-4">Free</h3>
-                    <p class="text-3xl font-bold mb-4">₹0<span class="text-sm font-normal">/month</span></p>
-                    <ul class="text-left mb-6">
-                        <li class="mb-2">✓ Basic device registration</li>
-                        <li class="mb-2">✓ 5 IMEI verifications</li>
-                        <li class="mb-2">✓ Standard support</li>
-                    </ul>
-                    <a href="#signup" class="block w-full bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">Sign Up</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-center border-2 border-green-600">
-                    <h3 class="text-xl font-semibold mb-4">Silver</h3>
-                    <p class="text-3xl font-bold mb-4">₹399<span class="text-sm font-normal">/month</span></p>
-                    <ul class="text-left mb-6">
-                        <li class="mb-2">✓ Advanced device management</li>
-                        <li class="mb-2">✓ 25 IMEI verifications</li>
-                        <li class="mb-2">✓ Priority support</li>
-                    </ul>
-                    <a href="#signup" class="block w-full bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">Choose Plan</a>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <h3 class="text-xl font-semibold mb-4">Platinum</h3>
-                    <p class="text-3xl font-bold mb-4">₹599<span class="text-sm font-normal">/month</span></p>
-                    <ul class="text-left mb-6">
-                        <li class="mb-2">✓ Unlimited IMEI verifications</li>
-                        <li class="mb-2">✓ 20% coverage on total loss*</li>
-                        <li class="mb-2">✓ Premium support</li>
-                        <li class="mb-2">✓ Inventory management</li>
-                    </ul>
-                    <a href="#signup" class="block w-full bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">Choose Plan</a>
-                </div>
-            </div>
-            <p class="text-sm text-gray-600 mt-4 text-center">* Terms and conditions apply</p>
-        </section>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-white relative font-sans">
+    <main class="container flex flex-col items-center">
+      <img src="/name.svg" class="name relative z-10" alt="" />
+      <img src="/date.svg" class="dateimg" />
+      <img src="/comple.svg" class="comple" alt="" />
+      <img src="/bg.svg" class="w-screen z-5 absolute left-0 top-0" alt="" />
+      <img src="/location.svg" class="mt-5 address" />
+      <img src="/couple.png" class="w-screen mt-8" alt="" />
     </main>
-
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2024 Gardmei. All rights reserved.</p>
-            <div class="mt-4">
-                <a href="#" class="text-gray-400 hover:text-white mx-2">Privacy Policy</a>
-                <a href="#" class="text-gray-400 hover:text-white mx-2">Terms of Service</a>
-                <a href="#" class="text-gray-400 hover:text-white mx-2">Contact Us</a>
-            </div>
-        </div>
-    </footer>
-</body>
+  </body>
 </html>
