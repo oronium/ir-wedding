@@ -26,6 +26,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body class="bg-white relative font-sans">
     <main class="container flex flex-col items-center">
@@ -42,9 +46,16 @@
 
       <img src="/couple.png" class="w-screen mt-8" alt="" />
     </main>
-    <audio autoplay>
+    <audio id="myAudio" autoplay>
       <source src="/audio.mp3" type="audio/mpeg" />
     </audio>
+    <button onclick="playAudio()" class="music-button">
+      <i class="fas fa-music music-icon"></i>
+    </button>
   </body>
+  <script>
+    function playAudio() {
+      document.getElementById("myAudio").play();
+    }
+  </script>
 </html>
-x

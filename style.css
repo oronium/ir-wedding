@@ -13,3 +13,31 @@
 .address {
   width: 288px;
 }
+.music-button {
+  border: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 1000px;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.music-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.music-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.music-icon {
+  font-size: 24px;
+  color: #333;
+}
