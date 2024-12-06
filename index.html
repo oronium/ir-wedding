@@ -49,13 +49,23 @@
     <audio id="myAudio" autoplay>
       <source src="/audio.mp3" type="audio/mpeg" />
     </audio>
-    <button onclick="playAudio()" class="music-button">
-      <i class="fas fa-music music-icon"></i>
+    <button onclick="toggleAudio()" class="music-button">
+      <i class="fas fa-music music-icon" id="musicIcon"></i>
     </button>
   </body>
   <script>
-    function playAudio() {
-      document.getElementById("myAudio").play();
+    // Toggle audio play/pause
+    function toggleAudio() {
+      const audio = document.getElementById("myAudio");
+      const musicIcon = document.getElementById("musicIcon");
+
+      if (audio.paused) {
+        audio.play();
+        musicIcon.style.color = "#1DB954"; // Change icon color to indicate playing
+      } else {
+        audio.pause();
+        musicIcon.style.color = "#333"; // Reset icon color to indicate paused
+      }
     }
   </script>
 </html>
